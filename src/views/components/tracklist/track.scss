@@ -1,0 +1,39 @@
+.track-list{
+  padding-top: 10px;
+  width: 100%;
+}
+.track{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+    & span {
+      margin-left: 15px;
+      font-family: "Ubuntu", sans-serif;
+    }
+    & .track__title{
+      font-size: 1.4em;
+      line-height: 1.5em;
+      color: rgb(228,228,239);
+    }
+    & .track__author{
+      font-size: 1.1em;
+      line-height: 1.5em;
+      font-weight: lighter;
+      color: rgb(189, 189, 194);
+    }
+
+    & > .row{
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+        width: 100%;
+    }
+}

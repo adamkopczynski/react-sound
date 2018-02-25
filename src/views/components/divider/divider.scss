@@ -1,0 +1,27 @@
+.divider{
+  position: relative;
+  height: 2px;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 1px;
+    background-color: rgba(#000000, 0.3);
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left:0;
+    height: 1px;
+    background-color: rgba(#ffffff, 0.1);
+  }
+}

@@ -1,0 +1,22 @@
+.divider {
+  position: relative;
+  height: 2px;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  .divider:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .divider:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1); }
