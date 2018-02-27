@@ -7,7 +7,7 @@ const SingleTrack = ({title, author, album}) => {
   return(
     <div className='track'>
       <div className='row'>
-        <Icon src={PlayIcon}/>
+        <Icon src={PlayIcon} size='small' />
         <span>
           <p className="track__title"> {title} </p>
           <p className="track__author">{author} ({album})</p>

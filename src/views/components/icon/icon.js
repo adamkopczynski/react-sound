@@ -1,9 +1,10 @@
 import React from 'react'
 import './icon.css'
 
-const Icon  = ({src}) => {
+const Icon  = ({src, size}) => {
+
   return(
-    <img src={src} className='icon' alt='icon'/>
+    <img src={src} className={ size==='small' ? 'icon small' : 'icon large'} alt='icon'/>
   )
 }
 
