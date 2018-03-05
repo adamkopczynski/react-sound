@@ -44,6 +44,8 @@ export default function trackListsReducer(state = INITIAL_STATE, action){
   switch(action.type){
     case types.CLEAR_TRACK_LIST:
       return {...state, list: []}
+    case types.FETCH_TRACKS_FULLFILED:
+      return {...state, list: action.payload}
     default:
       return state;
   }

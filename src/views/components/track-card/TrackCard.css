@@ -1,15 +1,19 @@
 .track-card {
   width: 94px;
-  height: 125px;
+  height: 135px;
   margin-right: 15px; }
+  .track-card .track-card__title,
+  .track-card .track-card__author {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Ubuntu", sans-serif;
+    margin-left: 2px; }
   .track-card .track-card__title {
     margin-top: 5px;
-    margin-left: 2px;
     font-size: 15px;
-    color: #444444;
-    font-family: "Ubuntu", sans-serif; }
+    color: #444444; }
   .track-card .track-card__author {
     font-size: 14px;
-    margin-left: 2px;
-    color: #736b6b;
-    font-family: "Ubuntu", sans-serif; }
+    color: #736b6b; }
