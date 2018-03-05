@@ -9,13 +9,13 @@ class Home extends React.Component {
       client_id: 'd02c42795f3bcac39f84eee0ae384b00'
     });
 
-    var page_size = 100;
-    SC.get('/tracks', { limit: page_size }).then(res => {
-      console.log(res)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    SC.stream('/tracks/293')
+      .then(player => {
+        console.log(player.currentTime())
+      })
+      .catch(e => {
+        console.error('Playback rejected. Try calling play() from a user interaction.', e)
+      })
   }
   render(){
     return(

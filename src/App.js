@@ -8,6 +8,7 @@ import './views/styles/main.css';
 
 import store from './store';
 
+
 class App extends Component {
   render() {
     return (
