@@ -5,12 +5,12 @@ import PlayIcon from '../../../images/icon.png'
 
 import './TrackCard.css'
 
-const TrackCard = () => {
+const TrackCard = ({title, img, author}) => {
   return(
     <div className='track-card'>
-      <Icon size='large' src={PlayIcon} />
-      <span className='track-card__title'>Title</span>
-      <span className='track-card__author'>Author</span>
+      <Icon size='large' src={img ? img : PlayIcon} />
+      <span className='track-card__author'>{author}</span>
+      <span className='track-card__title'>{title}</span>
     </div>
   )
 }

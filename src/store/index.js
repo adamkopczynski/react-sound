@@ -1,5 +1,6 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux'
 import trackListReducer from '../reducers/tracklist'
+import tracksReducer from '../reducers/tracks'
 import createSagaMiddleware from 'redux-saga'
 
 import saga from '../sagas/saga'
@@ -7,7 +8,8 @@ import saga from '../sagas/saga'
 const sagaMiddleware = createSagaMiddleware()
 
 const reducers = combineReducers({
-  trackList: trackListReducer
+  trackList: trackListReducer,
+  tracks: tracksReducer
 })
 
 const store = createStore(
