@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import Navbar from './views/components/navbar';
 import Sidebar from './views/components/sidebar';
+import Player from './views/components/player'
 import Home from './views/pages/home/home';
 import './views/styles/main.css';
 
@@ -22,6 +23,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
               </div>
             </div>
+            <Player />
           </div>
         </Router>
       </Provider>

@@ -1,0 +1,12 @@
+.player {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(49, 49, 65, 0.98);
+  padding: 10px 20px; }
+
+.play-btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px; }
