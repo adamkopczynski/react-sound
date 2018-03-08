@@ -1,22 +1,20 @@
 import {takeEvery, put} from 'redux-saga/effects'
 import {addTracksSuccess} from '../actions/tracks.js'
 import {playerSuccess} from '../actions/player.js'
-import SC from 'soundcloud'
 
-SC.initialize({
-  client_id: 'd02c42795f3bcac39f84eee0ae384b00'
-});
+const apiKey = 'AIzaSyD69e556BuyVHwUdgrA9H0buJtJqNhATIM'
+
 
 function* newTracks(dispatch){
-  const tracks = yield SC.get('/tracks', { limit: 20, genres: 'rock' })
-  yield put(addTracksSuccess(tracks))
+  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=18&playlistId=PLgzTt0k8mXzEk586ze4BjvDXR7c-TUSnx&key=${apiKey}`
+  const tracks = yield fetch(url)
+  .then(res =>{ return res.json()})
+
+  yield put(addTracksSuccess(tracks.items))
 }
 
 function* createPlayer({payload}){
-  const track = `/tracks/${payload.id}`
-  const player = yield SC.stream(track)
-  console.log('ok ',player)
-  yield put(playerSuccess(player))
+  yield put(playerSuccess(payload.id))
 }
 
 export default function* rootSaga() {

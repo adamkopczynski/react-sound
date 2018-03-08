@@ -2,7 +2,9 @@
   background-color: #e3e3ef;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 30px !important; }
+  padding: 30px !important;
+  max-height: 600px;
+  scroll-behavior: smooth; }
 
 .tracks {
   margin: 26px 0; }
@@ -15,7 +17,7 @@
 
 body {
   background-color: #292938;
-  overflow: hidden; }
+  overflow: hidden !important; }
 
 .container-fluid {
   padding: 0; }

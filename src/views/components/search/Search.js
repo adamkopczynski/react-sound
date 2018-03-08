@@ -1,8 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import './Search.css'
 import { withRouter } from 'react-router-dom';
 
 class Search extends React.Component{
+  static propTypes = {
+    history: PropTypes.object
+  }
   constructor(props) {
         super(props);
         this.state = {

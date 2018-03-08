@@ -5,9 +5,39 @@
   width: 100%;
   background-color: rgba(#313141, 0.98);
   padding: 10px 20px;
+  -webkit-transition: .3s all ease-in;
+  transition: .3s all ease-in;
+
+  &.active{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  &.hidden{
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+.hide{
+  display: none;
+}
+.player__visibility-btn{
+  position: absolute;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  width: 50px;
+  height: 25px;
+  font-size: 20px;
+  border: none;
+  background-color: rgba(#313141, 0.98);
+  color: #fff;
+
 }
 .play-btn{
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }

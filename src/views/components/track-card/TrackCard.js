@@ -24,7 +24,7 @@ const TrackCard = ({title, img, author,id, createPlayer}) => {
 
 TrackCard.propTypes = {
   title: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
   author: PropTypes.string.isRequired,
   createPlayer: PropTypes.func.isRequired,
 }
