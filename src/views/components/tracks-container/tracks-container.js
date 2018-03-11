@@ -16,7 +16,7 @@ class TracksContainer extends React.Component {
                                             title={track.snippet.title}
                                             img={track.snippet.thumbnails.default.url}
                                             author={track.snippet.channelTitle}
-                                            id={track.snippet.resourceId.videoId}/>)}
+                                            id={track.id.videoId}/>)}
       </div>
     )
   }

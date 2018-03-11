@@ -12,3 +12,6 @@ export const SET_PLAYER = 'SET_PLAYER'
 export const SHOW_PLAYER = 'SHOW_PLAYER'
 export const PLAY = 'PLAY'
 export const PAUSE = 'PAUSE'
+
+export const SEARCH_TRACKS_REQUESTED = 'SEARCH_TRACKS_REQUESTED'
+export const SEARCH_TRACKS_SUCCESS = 'SEARCH_TRACKS_SUCCESS'

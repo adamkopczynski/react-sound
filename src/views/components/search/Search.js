@@ -1,8 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import {searchTracks} from '../../../actions/search'
 
 import './Search.css'
 import { withRouter } from 'react-router-dom';
+
+const mapDispatchToProps = (dispatch) => ({
+  search: query => dispatch(searchTracks(query))
+})
 
 class Search extends React.Component{
   static propTypes = {
@@ -19,7 +25,7 @@ class Search extends React.Component{
   }
   onInputSubmit(e){
     if(e.key === 'Enter'){
-      //this.state.value
+      this.props.search(this.state.value)
       this.props.history.push('/search')
       this.setState({value: ''})
     }
@@ -40,4 +46,4 @@ class Search extends React.Component{
   }
 }
 
-export default withRouter(Search)
+export default withRouter(connect(()=>({}), mapDispatchToProps)(Search))
