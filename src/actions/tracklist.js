@@ -4,7 +4,12 @@ export const clearTrackList = () => ({
   type: types.CLEAR_TRACK_LIST
 })
 
-export const addTracks = (tracks) => ({
-  type: types.FETCH_TRACKS_FULLFILED,
-  payload: tracks
+export const addTrack = (track) => ({
+  type: types.FETCH_TRACK_SUCCESS,
+  payload: {track}
+})
+
+export const addTrackRequest = (id) => ({
+  type: types.FETCH_TRACK_REQUESTED,
+  payload: {id}
 })

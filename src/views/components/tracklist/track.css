@@ -2,7 +2,7 @@
   padding-top: 10px;
   width: 100%;
   overflow-y: scroll;
-  max-height: 85%; }
+  height: calc(100% - 60px); }
 
 .track {
   display: -webkit-box;
@@ -18,14 +18,19 @@
   align-items: center; }
   .track span {
     margin-left: 15px;
-    font-family: "Ubuntu", sans-serif; }
+    font-family: "Ubuntu", sans-serif;
+    width: 180px; }
+  .track .track__author,
   .track .track__title {
-    font-size: 1.4em;
-    line-height: 1.5em;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .track .track__title {
+    font-size: 1.1em;
     color: #e4e4ef; }
   .track .track__author {
-    font-size: 1.1em;
-    line-height: 1.5em;
+    font-size: .9em;
     font-weight: lighter;
     color: #bdbdc2; }
   .track > .row {

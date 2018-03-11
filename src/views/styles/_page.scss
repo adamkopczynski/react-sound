@@ -3,7 +3,7 @@
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 30px !important;
-  max-height: 600px;
+  height: calc(100vh - 80px);
   scroll-behavior: smooth;
 }
 .tracks{

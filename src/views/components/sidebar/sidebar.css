@@ -1,8 +1,10 @@
 .sidebar {
   color: #fff;
   background-color: #292938;
-  height: 600px; }
+  height: calc(100vh - 80px);
+  width: 300px; }
 
 .sidebar-nav {
   background-color: #313141;
-  padding: 15px 20px; }
+  padding: 15px 20px;
+  height: 60px; }

@@ -5,6 +5,9 @@ import {connect} from 'react-redux'
 import {hidePlayer, showPlayer, setPlayer, play, pause} from '../../../actions/player'
 import YouTube from 'react-youtube'
 
+// React Icons //
+import PlayIcon from 'react-icons/lib/md/play-arrow'
+import PauseIcon from 'react-icons/lib/md/pause'
 
 import './player.css'
 
@@ -13,7 +16,8 @@ const mapStateToProps = ({player}) => ({
   player: player.player,
   isActive: player.playerActive,
   isVisible: player.visible,
-  isPlaying: player.isPlaying
+  isPlaying: player.isPlaying,
+  title: player.trackTitle
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -38,7 +42,8 @@ class Player extends React.Component {
     isVisible: PropTypes.bool,
     player: PropTypes.object,
     url: PropTypes.string,
-    isPlaying: PropTypes.bool
+    isPlaying: PropTypes.bool,
+    title: PropTypes.string
   }
 
   handleClick(event){
@@ -69,10 +74,13 @@ class Player extends React.Component {
           <button className='player__visibility-btn' onClick={this.handleClick.bind(this)}>
               <i className='fas fa-angle-down'></i>
           </button>
+          <span className='player__title'>
+            {this.props.title}
+          </span>
           <button className='play-btn' onClick={this._controlPlaying.bind(this)}>
             {this.props.isPlaying ?
-              <i className= "material-icons">play__arrow</i>:
-              <i className="material-icons">&#xE037;</i>
+              <PauseIcon />:
+              <PlayIcon />
             }
           </button>
           <YouTube

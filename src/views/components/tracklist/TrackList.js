@@ -14,12 +14,12 @@ const mapStateToProps = ({trackList}) => ({
 const TrackList = ({trackList}) => {
   return(
     <div className='col track-list'>
-      {trackList.map((song, i) =>
+      {trackList.map(({track}) =>
         <SingleTrack
-          key={i}
-          title={song.title}
-          author={song.author}
-          album={song.album}
+          key={track.items[0].id}
+          title={track.items[0].snippet.title}
+          author={track.items[0].snippet.channelTitle}
+          img={track.items[0].snippet.thumbnails.default.url}
         />)}
     </div>
   )

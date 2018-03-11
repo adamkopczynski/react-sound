@@ -2,7 +2,7 @@
   padding-top: 10px;
   width: 100%;
   overflow-y: scroll;
-  max-height: 85%;
+  height: calc(100% - 60px);
 }
 .track{
   display: -webkit-box;
@@ -20,15 +20,23 @@
     & span {
       margin-left: 15px;
       font-family: "Ubuntu", sans-serif;
+      width: 180px;
     }
+
+    & .track__author,
     & .track__title{
-      font-size: 1.4em;
-      line-height: 1.5em;
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & .track__title{
+      font-size: 1.1em;
       color: rgb(228,228,239);
     }
     & .track__author{
-      font-size: 1.1em;
-      line-height: 1.5em;
+      font-size: .9em;
       font-weight: lighter;
       color: rgb(189, 189, 194);
     }

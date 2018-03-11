@@ -1,9 +1,10 @@
 import * as types  from '../constants/ActionTypes'
 
-export const playerRequest = id => ({
+export const playerRequest = (id, title) => ({
   type: types.PLAYER_REQUESTED,
   payload: {
-    id
+    id,
+    title
   }
 })
 

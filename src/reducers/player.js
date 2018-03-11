@@ -3,6 +3,7 @@ import * as types  from '../constants/ActionTypes'
 const INITIAL_STATE = {
   player: false,
   playerUrl: '',
+  trackTitle: '',
   playerActive: false,
   visible: false,
   isPlaying: false
@@ -11,7 +12,7 @@ const INITIAL_STATE = {
 export default function playerReducer(state = INITIAL_STATE, action){
   switch(action.type){
     case types.PLAYER_REQUESTED:
-      return {...state, playerSongId: action.payload.id}
+      return {...state, playerSongId: action.payload.id, trackTitle: action.payload.title}
     case types.PLAYER_SUCCESS:
       return {...state, playerUrl: action.payload.playerUrl,
               playerActive: true, visible: true, isPlaying: true}

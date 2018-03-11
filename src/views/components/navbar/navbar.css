@@ -23,7 +23,7 @@
   margin-top: 10px; }
 
 .links {
-  position: absolute;
-  right: 0; }
+  display: block;
+  margin-left: auto; }
   .links > a {
     color: #e3e3ef; }
