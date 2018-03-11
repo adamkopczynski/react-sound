@@ -3,6 +3,13 @@
   height: 165px;
   margin-right: 15px;
   margin-bottom: 20px; }
+  .track-card:hover {
+    cursor: pointer; }
+    .track-card:hover .icon {
+      -webkit-filter: brightness(1.2);
+      filter: brightness(1.2);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
   .track-card .track-card__title,
   .track-card .track-card__author {
     display: block;

@@ -12,6 +12,7 @@ function* newTracks(){
   const tracks = yield fetch(url)
   .then(res =>{ return res.json()})
 
+  console.log('new', tracks.items)
   yield put(addTracksSuccess(tracks.items))
 }
 
@@ -21,7 +22,7 @@ function* createPlayer({payload}){
 
 
 function* searchTracks({payload}){
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${payload.query}&key=${apiKey}`
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=24&q=${payload.query}&key=${apiKey}`
   const tracks = yield fetch(url)
   .then(res =>{ return res.json()})
 

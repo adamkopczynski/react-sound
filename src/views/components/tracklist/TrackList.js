@@ -17,6 +17,7 @@ const TrackList = ({trackList}) => {
       {trackList.map(({track}) =>
         <SingleTrack
           key={track.items[0].id}
+          id={track.items[0].id}
           title={track.items[0].snippet.title}
           author={track.items[0].snippet.channelTitle}
           img={track.items[0].snippet.thumbnails.default.url}

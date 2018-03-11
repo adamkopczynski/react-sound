@@ -4,6 +4,16 @@
   margin-right: 15px;
   margin-bottom: 20px;
 
+  &:hover{
+    cursor: pointer;
+
+    .icon{
+      -webkit-filter: brightness(1.2);
+              filter: brightness(1.2);
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
 
   .track-card__title,
   .track-card__author{

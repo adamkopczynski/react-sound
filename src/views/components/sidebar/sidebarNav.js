@@ -1,7 +1,8 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {clearTrackList} from '../../../actions/tracklist.js';
+import React from 'react'
+import {connect} from 'react-redux'
+import PropTypes from 'prop-types'
+import {clearTrackList} from '../../../actions/tracklist.js'
+import Button from '../button'
 
 const mapDispatchToProps = (dispatch) => ({
   clearTrackList: () => dispatch(clearTrackList())
@@ -11,11 +12,11 @@ const SidebarNav = ({clearTrackList, addTracks}) => {
   return(
     <div className='sidebar-nav row'>
 
-      <button className='btn col'>Save </button>
+      <Button label='Save' />
 
-      <button className='btn col' onClick={() => clearTrackList()}>Clear </button>
+      <Button onClick={() => clearTrackList()} label='Clear' />
 
-      <button className='btn col'>Hide </button>
+      <Button label='Next' />
     </div>
   )
 }
