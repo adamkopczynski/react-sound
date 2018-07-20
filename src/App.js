@@ -21,7 +21,7 @@ class App extends Component {
             <div className="container-fluid">
               <div className='row'>
                 <Sidebar />
-                <Route exact path="/" component={Home} />
+                <Route exact path="/react-sound" component={Home} />
                 <Route path="/search" component={SearchPage} />
               </div>
             </div>
