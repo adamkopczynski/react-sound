@@ -1,0 +1,15 @@
+.volume-icon{
+  font-size: 30px;
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  margin-left: auto;
+  -webkit-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+
+  &:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}

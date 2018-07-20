@@ -26,6 +26,14 @@ body{
   color: rgb(208,208,226);
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
+  -webkit-transition: .2s all ease-in;
+  -webkit-transition: .1s all ease-in;
+  transition: .1s all ease-in;
+
+  &:hover{
+    cursor: pointer;
+    background-color: #454555;
+  }
 }
 .app-container{
   height: 100vh;

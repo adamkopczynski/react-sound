@@ -12,7 +12,6 @@ function* newTracks(){
   const tracks = yield fetch(url)
   .then(res =>{ return res.json()})
 
-  console.log('new', tracks.items)
   yield put(addTracksSuccess(tracks.items))
 }
 
@@ -26,7 +25,6 @@ function* searchTracks({payload}){
   const tracks = yield fetch(url)
   .then(res =>{ return res.json()})
 
-  console.log(tracks.items)
   yield put(searchTracksSuccess(tracks.items))
 }
 

@@ -34,7 +34,13 @@ body {
   font-size: 14px;
   color: #d0d0e2;
   font-family: 'Ubuntu', sans-serif;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: .2s all ease-in;
+  -webkit-transition: .1s all ease-in;
+  transition: .1s all ease-in; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #454555; }
 
 .app-container {
   height: 100vh; }

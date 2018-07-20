@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 import {hidePlayer, showPlayer, setPlayer, play, pause} from '../../../actions/player'
 import YouTube from 'react-youtube'
 
+import VolumeIcon from '../volume-icon'
+
 // React Icons //
 import PlayIcon from 'react-icons/lib/md/play-arrow'
 import PauseIcon from 'react-icons/lib/md/pause'
@@ -68,6 +70,7 @@ class Player extends React.Component {
       this.props.play()
     }
   }
+
   render(){
     return(
       <div className={this.props.isVisible ? 'player active' : 'player hidden'}>
@@ -83,6 +86,10 @@ class Player extends React.Component {
               <PlayIcon />
             }
           </button>
+          <VolumeIcon
+                volume={this.props.player ? this.props.player.getVolume() : 100}
+                mute={() => this.props.player.mute()}
+                unmute={() => this.props.player.setVolume(100)}/>
           <YouTube
             className='hide'
             videoId={this.props.url}
@@ -95,6 +102,7 @@ class Player extends React.Component {
 
   _onReady(event) {
     this.props.setPlayer(event.target)
+    this.props.player.playVideo()
     console.log(event.target)
   }
 }

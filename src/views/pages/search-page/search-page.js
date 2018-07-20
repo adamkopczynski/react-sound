@@ -19,7 +19,9 @@ class SearchPage extends React.Component {
           <ContentHeader title='Search results'/>
           {this.props.fetchingTracks ?
                           <Loader /> :
-                          <TracksContainer tracks={this.props.tracks}/>
+                          this.props.tracks.length > 0 ?
+                          <TracksContainer tracks={this.props.tracks}/> :
+                          'No results you must search tracks firstly'
           }
 
       </div>

@@ -39,9 +39,11 @@
   .player__visibility-btn svg {
     -webkit-transition: .5s all ease-in-out;
     transition: .5s all ease-in-out; }
-  .player__visibility-btn:hover svg {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); }
+  .player__visibility-btn:hover {
+    cursor: pointer; }
+    .player__visibility-btn:hover svg {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); }
 
 .player__title {
   color: #fff;
@@ -72,7 +74,10 @@
   align-items: center;
   border: 2px solid #fff;
   color: #fff;
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear; }
   .play-btn:hover, .play-btn:focus {
+    cursor: pointer;
     background-color: #fff;
     color: rgba(49, 49, 65, 0.98); }

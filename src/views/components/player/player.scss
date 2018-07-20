@@ -45,6 +45,7 @@
     transition: .5s all ease-in-out;
   }
   &:hover{
+    cursor: pointer;
     svg{
         -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
@@ -83,8 +84,11 @@
     border: 2px solid #fff;
     color: #fff;
     background-color: transparent;
+    -webkit-transition: .1s all linear;
+    transition: .1s all linear;
 
     &:hover, &:focus{
+      cursor: pointer;
       background-color: #fff;
       color: rgba(#313141, 0.98);
     }
